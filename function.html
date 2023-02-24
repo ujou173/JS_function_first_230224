@@ -7,6 +7,53 @@
   <title>Document</title>
 </head>
 <body>
-  
+  <div id="root"></div>
+  <script>
+    // 변수 선언 문
+    let rubin = 1; //rubin 이라는 변수를 만들었다 -> 개발자스럽게 말하면 메모리를 할당했다.
+    console.log(rubin); 
+    rubin = "바보";
+    console.log(rubin);
+
+    // 함수 선언 문
+    // function valueChange(first, second) { //()안에 들어가 있는 것이 매개변수
+      // return first + second + "안녕하세요"; // "안녕하세요" 부분은 변경할 수 있는 방법이 없다. -> 불변성 이라고 한다. 리터럴이라고도 한다.
+    // }
+    
+    // 절차형 프로그래밍
+    function valueChange(a, b, c) {
+      if(typeof(a) === "string") { //1번 절차
+        if(typeof(b) === "string") { //2번 절차
+          if(typeof(c) === "string") { //3번 절차
+            return a + b + c; //4번 절차
+          };
+        };
+      };
+    };
+    
+    rubin = valueChange(1, 3, 61);
+    console.log(rubin);
+
+    let root = document.getElementById('root');
+    function pluscalculate(first, second) {
+      let result = first + second;
+      return result;
+    };
+    console.log(pluscalculate(25, 75));
+
+    function nanugicalculate(first, second) {
+      let result = first / second;
+      return result;
+    };
+    console.log(nanugicalculate(6, 4));
+
+    function minerscalculate(first, second) {
+      let result = first - second;
+      return result;
+    };
+    console.log(minerscalculate(6, 4));
+
+
+  </script>
 </body>
 </html>
