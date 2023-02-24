@@ -53,6 +53,11 @@
     };
     console.log(minerscalculate(6, 4));
 
+    function percentcalculateReturnString(first, second) { //직접 만드는 함수에서는 반환 타입을 직접 함수명에 적기도 한다.
+      let result = (first / second) * 100;
+      return result + "%"; // number + "string"은 숫자와 문자가 합쳐져 문자를 이뤘기 때문에 "string"을 반환한다.
+    };
+    console.log(percentcalculate(37, 100));
 
   </script>
 </body>
