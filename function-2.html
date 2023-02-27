@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- 강사 예제 분석 파일 -->
+  <div id="root"></div>
+
+  <script>
+    let root = document.getElementById("root");
+    function percentCalcReturnString(firstValue, secondValue) {
+      let result = (firstValue / secondValue) * 100;
+      return result + "%";
+    }
+
+    let h1Tag = document.createElement("h1");
+    h1Tag.setAttribute("id", "title");
+    h1Tag.textContent = percentCalcReturnString(27, 100);
+    console.log(h1Tag.textContent);
+    root.appendChild(h1Tag);
+  </script>
+</body>
+</html>

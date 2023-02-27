@@ -21,24 +21,25 @@ function taxCalculateReturnString(price) {
 console.log(taxCalculateReturnString(3700));
 
 // 사칙연산 계산기
-function numberCalculate(firstValue, calc, secondValue) {
-  let result;
-  if(calc === "+") {
-    result = firstValue + secondValue;
-    return result;
-  } else if(calc === "-") {
-    result = firstValue - secondValue;
-    return result;
-  } else if (calc === "x") {
-    result = firstValue * secondValue;
-    return result;
-  } else if (calc === "/") {
-    result = firstValue / secondValue;
-    return result;
+function numberCalculate(firstValue, calc, secondValue) { //매개변수를 3개 받는다. 첫번째 값, 연산자, 두번째 값
+  let result; // 결과값을 저장할 result 변수를 미리 선언
+  if(calc === "+") { //연산자가 문자열 + 일 때
+    result = firstValue + secondValue; // 첫번째 값과 두번째 값을 더해라
+    return result; // 결과값을 반환해라
+  } else if(calc === "-") { // 연산자가 문자열 - 일 때
+    result = firstValue - secondValue; // 첫번째 값에서 두번째 값을 빼라
+    return result; // 반환
+  } else if (calc === "x") { // 연산자가 문자열 x 일 때
+    result = firstValue * secondValue; // 첫번째 값과 두번째 값을 곱해라
+    return result; //반환
+  } else if (calc === "/") { // 연산자가 문자열 / 일 때
+    result = firstValue / secondValue; // 첫번째 값을 두번째 값으로 나눠라
+    return result; // 반환
   } else {
-    result = "계산 부호가 정확하지 않습니다";
-    return result;
+    result = "계산 부호가 정확하지 않습니다"; // 연산자 자리에 연산자가 아닌 다른것이 들어오면 오류 메세지를 출력한다
+    return result; //반환
   }
 }
 console.log("------")
-console.log(numberCalculate(27, 1, 3));
+console.log(numberCalculate(27, "x", 3));
+
