@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root">
+    <div id="number">
+      <button>0</button>
+      <button>1</button>
+      <button>2</button>
+      <button>3</button>
+      <button>4</button>
+      <button>5</button>
+      <button>6</button>
+      <button>7</button>
+      <button>8</button>
+      <button>9</button>
+    </div>
+    <div id="calc">
+      <button>+</button>
+      <button>-</button>
+      <button>X</button>
+      <button>/</button>
+      <button>C</button>
+      <button>=</button>
+    </div>
+    <div id="result"></div>
+  </div>
+
+  <script>
+    let root = document.getElementById("root");
+    let number = document.getElementById("number");
+    let calculator = document.getElementById("calc");
+
+    let numBtn = document.getElementById("number").children;
+    console.log(numBtn);
+
+    for(i=0;i<10;i++) {
+      numBtn[i] = i;
+      console.log(numBtn[i]);
+    }
+
+    numBtn[0].addEventListener("click", function(){
+      firstValue = 0;
+      console.log("first = " + firstValue);
+    })
+
+    numBtn[1].addEventListener("click", function(){
+      firstValue = 1;
+      console.log("first = " + firstValue);
+    })
+
+    numBtn[2].addEventListener("click", function(){
+      firstValue = 2;
+      console.log("first = " + firstValue);
+    })
+
+    numBtn[3].addEventListener("click", function(){
+      firstValue = 3;
+      console.log("first = " + firstValue);
+    })
+
+    function numberCalculator(firstValue, calc, secondValue) {
+      //숫자를 클릭하면 문자열 형태로 저장, 연산부호를 클릭하기 전까지 문자열 형태로 숫자를 더해 문자열을 만듬
+      // 연산부호를 클릭하면 이전에 문자 형태로 더했던 숫자를 number형으로 변경
+      // 클릭한 연산 부호를 문자열 형태로 저장. ex. + 클릭시 "+"를 저장
+      // 숫자 클릭시 문자열 형태로 저장, = 기호 클릭하기 전까지 문자열 형태로 숫자를 더해 문자열을 만듬
+      // = 기호 클릭시 첫번째 숫자와 두번째 숫자를 연산자에 의해 계산 if(calc === "x") {first + second}
+    }
+
+
+  </script>
+</body>
+</html>
